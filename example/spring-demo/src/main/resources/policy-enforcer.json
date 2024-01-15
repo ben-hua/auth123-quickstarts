@@ -1,0 +1,8 @@
+{
+  "realm": "quickstart",
+  "auth-server-url": "https://dev.auth123.top",
+  "resource": "backend-service",
+  "credentials": {
+    "secret": "secret"
+  }
+}

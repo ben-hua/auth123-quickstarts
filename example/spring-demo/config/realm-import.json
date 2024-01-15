@@ -1,0 +1,123 @@
+{
+  "realm": "quickstart",
+  "enabled": true,
+  "requiredCredentials": [
+    "password"
+  ],
+  "users": [
+    {
+      "username": "alice",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "alice"
+        }
+      ],
+      "realmRoles": [
+        "user"
+      ]
+    },
+    {
+      "username": "admin",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "admin"
+        }
+      ],
+      "realmRoles": [
+        "user",
+        "admin"
+      ]
+    }
+  ],
+  "roles": {
+    "realm": [
+      {
+        "name": "user",
+        "description": "User privileges"
+      },
+      {
+        "name": "admin",
+        "description": "Admin privileges"
+      }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "backend-service",
+      "enabled": true,
+      "bearerOnly": false,
+      "redirectUris": [
+        "*"
+      ],
+      "webOrigins": [
+        "*"
+      ],
+      "secret": "secret",
+      "authorizationServicesEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "authorizationSettings": {
+        "resources": [
+          {
+            "name": "Administrator resource",
+            "uris": [
+              "/api/admin/*"
+            ]
+          },
+          {
+            "name": "User resource",
+            "uris": [
+              "/api/users/*"
+            ]
+          }
+        ],
+        "policies": [
+          {
+            "name": "Only Administrators Policy",
+            "description": "Only administrators can access",
+            "type": "role",
+            "logic": "POSITIVE",
+            "decisionStrategy": "UNANIMOUS",
+            "config": {
+              "roles": "[{\"id\":\"admin\",\"required\":false}]"
+            }
+          },
+          {
+            "name": "Any User Policy",
+            "description": "Any user granted with the user role can access something",
+            "type": "role",
+            "logic": "POSITIVE",
+            "decisionStrategy": "UNANIMOUS",
+            "config": {
+              "roles": "[{\"id\":\"user\",\"required\":false}]"
+            }
+          },
+          {
+            "name": "User Resource Permission",
+            "type": "resource",
+            "logic": "POSITIVE",
+            "decisionStrategy": "UNANIMOUS",
+            "config": {
+              "resources": "[\"User resource\"]",
+              "applyPolicies": "[\"Any User Policy\"]"
+            }
+          },
+          {
+            "name": "Administration Resource Permission",
+            "type": "resource",
+            "logic": "POSITIVE",
+            "decisionStrategy": "UNANIMOUS",
+            "config": {
+              "resources": "[\"Administrator resource\"]",
+              "applyPolicies": "[\"Only Administrators Policy\"]"
+            }
+          }
+        ],
+        "scopes": []
+      }
+    }
+  ]
+}
