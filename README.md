@@ -36,4 +36,4 @@
 
 ## 其他
 
-- 如需创建自己的realm, 请提issue。 格式 title： add a new realm: xxx；内容中提供邮件地址。默认账号admin/admin
+- 如果想使用auth123.top的免费服务，快速开发验证，请提issue创建realm。 格式 title： add a new realm: xxx；内容中提供邮件地址。默认账号admin/admin
