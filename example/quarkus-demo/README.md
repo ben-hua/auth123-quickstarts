@@ -10,11 +10,11 @@
 
 bearer token是由Keycloak服务器颁发，这个token代表了一个授权的的主体。
 
-这是一个非常简单的示例，使用 RBAC 策略来管理对资源的访问。
+这是一个非常简单的示例，使用 Role-based access control (RBAC) 策略来管理对资源的访问。
 但是，Keycloak 支持其他类型的策略，您可以使用它们来执行更细粒度的访问控制。
 通过使用此示例，您将看到您的应用程序与授权策略完全解耦，并且强制执行完全基于所访问的资源。
 
-**keycloak服务，控制台演示地址** <https://dev.auth123.top/admin/quickstart/console/>
+**keycloak服务，控制台演示地址** <https://dev.auth123.top/admin/quickstart/console/> 账号 admin/admin
 
 ## Requirements
 
