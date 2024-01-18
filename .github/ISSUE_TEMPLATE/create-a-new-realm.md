@@ -8,6 +8,7 @@ assignees: ''
 ---
 
 **Base Information**
-1. Realm name:  xxx (one company just needs create one. All users, permissions, and applications belong to it)
-2. Email: xxx (Reset password)
-3. Your name: xxx
+
+- **Realm name** (one company just needs to create one. All users, permissions, and applications belong to it):  xxx
+- **Email** (Reset password): xxx
+- **Your name**: xxx
