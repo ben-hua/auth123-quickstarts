@@ -9,8 +9,8 @@
 
 - [spring-demo](/example/spring-demo/): 演示Spring-boot集成keycloak保护restful API
 - [quarkus-demo](/example/quarkus-demo/): 演示Quarkus集成keycloak保护restful API
-- [react-demo](/example/react-demo/): 演示Ant.design（react）集成keycloak保护Web页面
-- [q-admin](https://github.com/ben-hua/q-admin): 演示完整的前后台管理平台，包含完整的用户权限，包括API权限控制，菜单页面权限控制
+- [react-demo](/example/react-demo/) **TODO**: 演示react集成keycloak保护Web页面
+- [q-admin](https://github.com/ben-hua/q-admin) **TODO**: 演示完整的前后台管理平台，包含完整的用户权限，包括API权限控制，菜单页面权限控制
 
 ## quickstart realm详情
 
