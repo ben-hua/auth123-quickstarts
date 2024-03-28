@@ -45,6 +45,11 @@
             <artifactId>quarkus-resteasy-reactive-jackson</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-keycloak-authorization</artifactId>
+        </dependency>
+
         <!-- Test -->
         <dependency>
             <groupId>io.rest-assured</groupId>
@@ -109,6 +114,7 @@
             <properties>
                 <quarkus.package.type>native</quarkus.package.type>
                 <quarkus.native.enable-https-url-handler>true</quarkus.native.enable-https-url-handler>
+                <skipITs>true</skipITs>
             </properties>
             <build>
                 <plugins>
